@@ -1,0 +1,8 @@
+.favorite-icon {
+  cursor: pointer;
+  color: gray; // Color por defecto
+
+  &.favorite-icon {
+    color: red; // Color cuando es favorito
+  }
+}
