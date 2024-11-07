@@ -6,13 +6,15 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { RemplacePipe } from '../../pipes/remplace.pipe';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   standalone: true,
   imports: [MatTableModule, CommonModule, MatIconModule, RemplacePipe],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.scss'
+  styleUrl: './table.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class TableComponent {
   displayedColumns: string[] = ['name', 'url','favorite'];
