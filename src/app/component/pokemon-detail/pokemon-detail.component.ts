@@ -9,7 +9,7 @@ import { RemplacePipe } from '../../pipes/remplace.pipe';
 @Component({
   standalone: true,
   selector: 'app-pokemon-detail',
-  imports: [UpperPipe, CommonModule, FirsUpperPipe, RemplacePipe],
+  imports: [ CommonModule, FirsUpperPipe, RemplacePipe],
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.scss'],
 })
