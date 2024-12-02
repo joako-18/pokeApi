@@ -47,6 +47,12 @@ export class TableComponent {
     const favoritos: Pokemon[] = JSON.parse(localStorage.getItem('favoritos') || '[]');
 
     if (pokemon.isFavorite) {
+      if (favoritos.length >= 5) {
+        alert('Solo puedes tener un máximo de 5 Pokémon favoritos.');
+        pokemon.isFavorite = false;
+        return;
+      }
+
       if (!favoritos.some((fav) => fav.name === pokemon.name)) {
         favoritos.push({ ...pokemon });
       }
